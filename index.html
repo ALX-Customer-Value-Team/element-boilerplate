@@ -9,5 +9,33 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Uncomment the below for testing with the parameters passed in to the messageData -->
+    <!-- <script>
+      setTimeout(() => {
+        console.log("Running post message script.");
+        const messageData = {
+          user_details: {
+            access_token: "",
+            first_name: "",
+            last_name: "",
+            user_id: 1,
+            user_name: "",
+          },
+          object_record_meta: {
+            class_id: "",
+            record_id: "",
+          },
+          endpoint: "http://localhost:3001", //same port as the proxy
+          component_parameters: [],
+          parameters: {
+            completed_color: "#5AAD11",
+            outstanding_color: "#82A9FA",
+            overdue_color: "#FA3300",
+            user_tasks: "No",
+          },
+        };
+        window.postMessage(messageData, "http://127.0.0.1:5173/");
+      }, 2000);
+    </script> -->
   </body>
 </html>
