@@ -4,9 +4,6 @@ import React, { useEffect } from "react";
 import { MessageData } from "../types/interfaces";
 import { BASE_URL, USER_NAME, USER_PASSWORD } from "../consts";
 
-const baseUrl =
-  process.env.NODE_ENV === "development" ? "http://localhost:3002" : BASE_URL;
-
 const getToken = async (
   baseUrl: string | undefined,
   password: string | undefined,
@@ -59,7 +56,7 @@ export const useGetAccessToken = (
     if (!accessToken && process.env.NODE_ENV === "development") {
       (async () => {
         const token = await getToken(
-          messageData?.endpoint ? messageData.endpoint : baseUrl,
+          messageData?.endpoint ? messageData.endpoint : BASE_URL,
           USER_PASSWORD,
           USER_NAME
         );
