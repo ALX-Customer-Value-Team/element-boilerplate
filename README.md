@@ -1,6 +1,6 @@
 # ALX Feature Element Boiler Plate
 
-This template is designed to help get you started with creating your custom element to use in the ALX Catalyst platform. It handles the messageData that is passed into the app from Catalyst and them saved the message data into React useContext.
+This template is designed to help get you started with creating your custom element to use in the ALX Catalyst platform. It handles the messageData that is passed into the app from Catalyst and then saves the messageData into React useContext.
 
 # Getting started
 
@@ -29,6 +29,8 @@ npm run dev
 ```
 
 There is test code in the index.html which will simulate passing in the messageData with any parameters that you need the user to add when creating the element in Catalyst. This code needs to be uncommented and updated with the parameters to match the parameters in the config.json file.
+
+### NOTE: It is important that you remove or comment out the code used to simulate the messageData when you build a production build, otherwise it will override the users inputted parameters in Catalyst.
 
 ```html
 <!DOCTYPE html>
