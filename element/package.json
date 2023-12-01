@@ -1,7 +1,8 @@
 {
   "name": "element_boilerplate",
   "private": true,
-  "version": "0.0.0",
+  "author": "Simon Piercy",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npm run compile --prefix proxy_server\" \"npm run start --prefix proxy_server\" \"vite\"",
